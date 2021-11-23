@@ -1,7 +1,7 @@
 This is a list of tasks assigned to group members:
 
 Reminder: you can test your HTML pages with the command: gradle bootRun
-make sure you are within the /complete directory
+make sure you are within the /complete directory (use the command: cd /workspace/Group-Project-Spring/complete)
 
 1: Get the base for the project ready - Daniel Hill
 
