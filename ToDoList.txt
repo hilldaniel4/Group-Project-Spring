@@ -1,0 +1,21 @@
+This is a list of tasks assigned to group members:
+
+Reminder: you can test your HTML pages with the command: gradle bootRun
+make sure you are within the /complete directory
+
+1: Get the base for the project ready - Daniel Hill
+
+I have started with the same base we used for our individual Spring projects, it should be just fine for our purposes, though some changes will be made due to us using
+different APIs.
+
+2: HTML pages needed for each API -
+
+HTML pages are located in /complete/src/main/resources/templates
+
+3: CSS Stylesheets needed for HTML pages -
+
+CSS Stylesheets are located in /complete/src/main/resources/static/css
+
+4: API calls constructed - 
+
+Java files located in /complete/src/main/java/com/example/springboot
