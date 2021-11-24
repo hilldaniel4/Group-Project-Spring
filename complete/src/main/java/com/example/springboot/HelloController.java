@@ -19,4 +19,10 @@ public class HelloController {
 		return "greeting";
 	}
 
+	@GetMapping("/page2")
+	public String page2(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
+		model.addAttribute("name", name);
+		return "page2";
+	}
+
 }
