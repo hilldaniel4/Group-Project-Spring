@@ -1,3 +1,18 @@
 body{
-    color:blue;
+
+}
+.btn{
+    width:100%;
+    justify-content: center;
+    margin-top:2em;
+    margin-bottom:.5em;
+}
+label{
+    font-size: x-large;
+    font-weight: 400;
+    margin-top: .5em;
+    margin-bottom: .5em;
+}
+.display-activity{
+    margin-top:5%;
 }
