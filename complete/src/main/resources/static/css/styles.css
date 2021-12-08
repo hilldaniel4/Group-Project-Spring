@@ -14,10 +14,21 @@ label{
     margin-bottom: .5em;
 }
 .display-activity{
-    margin-top:5%;
+    margin-top:5em;
+    margin-bottom: 4em;
 }
 
 #large-bold{
     font-size: larger;
     font-weight: bold;
+}
+.bored{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+}
+.spinner-grow{
+    position:relative;
+    margin-left: 43%;
+    margin-right: 43%;
 }
