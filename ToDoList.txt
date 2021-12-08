@@ -5,17 +5,36 @@ make sure you are within the /complete directory (use the command: cd /workspace
 
 1: Get the base for the project ready - Daniel Hill
 
-I have started with the same base we used for our individual Spring projects, it should be just fine for our purposes, though some changes will be made due to us using
-different APIs.
+    I have started with the same base we used for our individual Spring projects, it should be just fine for our purposes, though some changes will be made due to us using
+    different APIs.
 
-2: HTML pages needed for each API -
+2: HTML pages needed for each API - Nicholas Daut, Tyler Wallace, Daniel Hill
 
 HTML pages are located in /complete/src/main/resources/templates
 
-3: CSS Stylesheets needed for HTML pages -
+    Nicholas Daut- Created Random Activity page.
+
+    Tyler Wallace - Modified Random Activity and Form pages.
+
+    Daniel Hill - Created Activity Form page, form not functional with API yet.
+
+3: CSS Stylesheets needed for HTML pages - Tyler Wallace, Nicholas Daut, Daniel Hill, Nicholas Kimmel
 
 CSS Stylesheets are located in /complete/src/main/resources/static/css
 
-4: API calls constructed - 
+    Tyler Wallace - Added CSS as work continued for both HTML pages.
+
+    Nicholas Daut - Added CSS as work continued for both HTML pages.
+
+    Daniel Hill - Added CSS as work continued for both HTML pages.
+
+    Nicholas Kimmel - Added CSS as work continued for both HTML pages.
+
+4: API calls constructed - Nicholas Daut, Tyler Wallace
+
+    Nicholas Daut - Got Random Activity working in Spring. Experimented in Node to try to make the form work after we got stuck in Spring.
+
+    Tyler Wallace - Working on Form page.
+
 
 Java files located in /complete/src/main/java/com/example/springboot
