@@ -15,21 +15,21 @@
     <!-- end nav -->
     <div class="container d-flex align-items-center justify-content-center" style="height: 100vh;">
         <div class="row">
-            <center>
-                <div class="col">
-                    <h1>Bored api stuff</h1>
-                    <p class="lead">Here is a random activity!</p>
-                    <div class="bored">
-                        <div class="spinner-grow" role="status">
-                            <span class="sr-only"></span>
-                        </div>
+            <div class="col">
+                <center>
+                <h1>Bored?</h1>
+                <p class="lead">Here is a random activity!</p>
+                </center>
+                <div class="bored">
+                    <div class="spinner-grow" role="status">
+                        <span class="sr-only"></span>
                     </div>
-                    <button class="btn btn-primary" onClick="window.location.reload();">New Activity</button>
-            </center>
+                </div>
+                <button class="btn btn-primary" onClick="window.location.reload();">New Activity</button>
+
+            </div>
 
         </div>
-
-    </div>
     </div>
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -38,13 +38,17 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
         $.ajax({
+
             url: 'http://www.boredapi.com/api/activity/',
             type: 'GET',
             dataType: 'json',
             success: function (data) {
                 console.log(data);
                 $('.bored').html(
-                    '<h3>Activity</h3>' + data.activity + '<h3>Type</h3>' + data.type + '<h3>People Required</h3>' + data.participants + '<h3>Shared link if any</h3>' + data.link
+                    '<p><span id="large-bold">Activity: </span>' + data.activity + '</p>' +
+                    '<p><span id="large-bold">Type: </span>' + data.type + '</p>' +
+                    '<p><span id="large-bold">Participants Required: </span>' + data.participants + '</p>' +
+                    '<p><span id="large-bold">Link (if any): </span>' + data.link + '</p>'
                 )
             },
             error: function (data) {

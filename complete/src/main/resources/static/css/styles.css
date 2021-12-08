@@ -16,3 +16,8 @@ label{
 .display-activity{
     margin-top:5%;
 }
+
+#large-bold{
+    font-size: larger;
+    font-weight: bold;
+}
