@@ -34,14 +34,15 @@
                         <option value="busywork">Busywork</option>
                     </select>
                     <!-- participants -->
-                    <!-- <label for="participants">Number of Participants (1-10)</label>
-                    <input type="range" class="form-range" min="1" max="10" id="participants"> -->
+                    <label for="participants">Number of Participants (1-10)</label>
+                    <input type="range" class="form-range" value="1" min="1" max="10" id="participants" oninput="this.nextElementSibling.value = this.value">
+                    <output>1</output><br>
                     <!-- price -->
-                    <!-- <label for="price">Free or Not?</label>
+                    <label for="price">Free or paid activity?</label>
                     <select class="form-control" id="price">
-                        <option id="0">Free</option>
-                        <option id="1">Not Free</option>
-                    </select> -->
+                        <option value = "0">Free</option>
+                        <option value = "1">Paid</option>
+                    </select>
                     <!-- submit button -->
                     <button onclick="btnSubmit()" type="button" class="btn btn-primary">Submit</button>
                 </form>
@@ -65,11 +66,29 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
+
+        function priceRange(){
+            var freeOrPaid = document.getElementById("price").value;
+            if (freeOrPaid == 0){
+                console.log("input was zero which means free");
+                return 0;
+            }
+            else if(freeOrPaid == 1){
+                console.log("input was one which means paid");
+                return 9999;
+            }
+            else{
+                console.log("THERE WAS AN UNEXPECTED ENTRY FOR PRICE");
+            }
+        }
+
         function btnSubmit() {
             var activityType = document.getElementById("activity-type").value;
-            $.ajax({
+            var participantsNumber = document.getElementById("participants").value;
+            var maxPrice = priceRange();
 
-                url: 'http://www.boredapi.com/api/activity?type=' + activityType,
+            $.ajax({
+                url: 'http://www.boredapi.com/api/activity?type=' + activityType + '&participants=' + participantsNumber + '&minprice=0&maxprice=' + maxPrice,
                 type: 'GET',
                 dataType: 'json',
                 success: function (data) {
@@ -78,6 +97,7 @@
                         '<p><span id="large-bold">Activity: </span>' + data.activity + '</p>' +
                         '<p><span id="large-bold">Type: </span>' + data.type + '</p>' +
                         '<p><span id="large-bold">Participants Required: </span>' + data.participants + '</p>' +
+                        '<p><span id="large-bold">Price: </span>' + data.price + '</p>' +
                         '<p><span id="large-bold">Link (if any): </span>' + data.link + '</p>'
                     )
                 },
