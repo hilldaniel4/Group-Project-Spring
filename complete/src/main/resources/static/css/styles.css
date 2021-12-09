@@ -1,5 +1,5 @@
 body{
-    background-color: lightgray;
+    background-color: rgba(255, 0, 0, 0.5);
 }
 .btn{
     width:100%;
@@ -31,4 +31,10 @@ label{
     position:relative;
     margin-left: 43%;
     margin-right: 43%;
+}
+.btn-primary{
+    background-color: green;
+}
+.bg-dark{
+    background-color: green!important;
 }
