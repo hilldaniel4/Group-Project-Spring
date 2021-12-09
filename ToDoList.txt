@@ -18,6 +18,8 @@ HTML pages are located in /complete/src/main/resources/templates
 
     Daniel Hill - Created Activity Form page, form not functional with API yet.
 
+    Nicholas Kimmel - Modified Activity Form page.
+
 3: CSS Stylesheets needed for HTML pages - Tyler Wallace, Nicholas Daut, Daniel Hill, Nicholas Kimmel
 
 CSS Stylesheets are located in /complete/src/main/resources/static/css
@@ -30,11 +32,13 @@ CSS Stylesheets are located in /complete/src/main/resources/static/css
 
     Nicholas Kimmel - Added CSS as work continued for both HTML pages.
 
-4: API calls constructed - Nicholas Daut, Tyler Wallace
+4: API calls constructed - Nicholas Daut, Tyler Wallace, Nicholas Kimmel
 
     Nicholas Daut - Got Random Activity working in Spring. Experimented in Node to try to make the form work after we got stuck in Spring.
 
-    Tyler Wallace - Working on Form page.
+    Tyler Wallace - Figured out Form page.
+
+    Nicholas Kimmel - Finished Form page.
 
 
 Java files located in /complete/src/main/java/com/example/springboot
