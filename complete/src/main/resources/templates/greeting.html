@@ -34,9 +34,9 @@
                         <option value="busywork">Busywork</option>
                     </select>
                     <!-- participants -->
-                    <label for="participants">Number of Participants (1-10)</label>
+                    <!-- <label for="participants">Number of Participants (1-10)</label>
                     <input type="range" class="form-range" value="1" min="1" max="10" id="participants" oninput="this.nextElementSibling.value = this.value">
-                    <output>1</output><br>
+                    <output>1</output><br> -->
                     <!-- price -->
                     <label for="price">Free or paid activity?</label>
                     <select class="form-control" id="price">
@@ -84,11 +84,11 @@
 
         function btnSubmit() {
             var activityType = document.getElementById("activity-type").value;
-            var participantsNumber = document.getElementById("participants").value;
+            // var participantsNumber = document.getElementById("participants").value;
             var maxPrice = priceRange();
 
             $.ajax({
-                url: 'http://www.boredapi.com/api/activity?type=' + activityType + '&participants=' + participantsNumber + '&minprice=0&maxprice=' + maxPrice,
+                url: 'http://www.boredapi.com/api/activity?type=' + activityType + '&minprice=0&maxprice=' + maxPrice,
                 type: 'GET',
                 dataType: 'json',
                 success: function (data) {
